@@ -1,0 +1,38 @@
+S1 CryptoQuip - 20121117 
+
+RVLFF GCAKRALR YGTIZKM ZSLZ WR PAWIQ GCAKKTI PM YSWYUAIR LZ L KLOWB OLYA: YFTYUR-AVPGTKQ.
+
+^L=a
+
+Solution: small overseas country that is being overrun by chickens at a rapid pace: clucks-embourg.
+
+TransTable: ^GUVIWKYLZMAOBPCQRSFT=okmnircatyepdbvgshlu
+
+Distribution:
+R=5
+G=3
+Z=3
+O=1
+W=3
+L=6
+A=6
+.=0
+T=3
+ =12
+I=3
+Q=1
+F=2
+Y=5
+C=1
+V=1
+K=5
+-=0
+S=1
+P=2
+:=0
+M=1
+B=0
+U=1
+** end distro. **
+
+

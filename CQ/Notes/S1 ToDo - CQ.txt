@@ -1,0 +1,17 @@
+S1 ToDo - CQ 
+
+> Add to dict.py:
+	X- Enter an encoded phrase and have it generate and use the pattern. (0712)
+	- Filter results based on a partial phrase, e.g. ?hi???? (chicken)
+	- Pass in phrase and have missing words reported/added to dictionary.
+
+> Add to CQ:
+	X- Add '?' as input to CQ to show usage
+	X- Add 'save' as input to CQ to save phrase AND translation table
+	X- Check output plist, writing path not encoded phrase.
+	X- Add 'load' as input to CQ to load stored phrase
+	- Sort Distribution before outputting
+	- Add confirmation dialog before ‘Set Phrase’ when a phrase is in progress (trans table is not empty).
+
+/Users/mazerlodge/Library/Application Support/iPhone Simulator/7.1-64/Applications/E42530AF-B102-4308-8B9B-7E17417D3B2D/Documents
+
