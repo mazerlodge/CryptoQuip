@@ -1,0 +1,50 @@
+S1 POA - Stacked Decrypted and Raw Phrases
+
+Issue - Raw and decrypted phrases are too hard to relate when displayed in separate windows.  
+
+Resolution - This issue has been fixed.
+
+Approach - Stack the phrases in a single text area, decoded text appearing above raw text, using a non-scalable font so characters align.  Create a single text string to be output to the text area.  When merged in a single window, accommodate line wrapping at 36 characters (for Courier 14 font).
+
+Inputs - 2 text phrases (raw and decoded) and one letter substitution clue (e.g. Z=o).
+
+Processing -  
+- Retain existing process to generate decoded phrase 
+- Add output preparation process to merge raw and decoded with appropriate line wrapping 
+	-- 'Appropriate' means after 36 characters unless that would break a word, then use the last whitespace 
+	-- Leave a blank line between 'wrapped segments'.
+
+- Detect Breakpoint
+	-- Inputs to this process are raw line and a start point
+	-- Find char at target breakpoint (pos start point + 36)
+	-- If not a space, step back (target--, e.g. 36--) until space is found
+	-- note and return target pos
+
+- Generate Output Line 
+	-- Inputs to this process are; raw line, decoded line
+	-- set substring start point (startPos) to 0
+	-- while (raw line length < start point)
+		-- Calculate breakpoint position by call to Detect Breakpoint, passing in raw line and current start point
+		-- Get current segment by substring of decoded from start point to start point + breakpoint
+		-- Add current segment to output string
+		-- Pad the output out to 36 characters
+		-- Get current segment by substring of raw from start point to start point + breakpoint
+		-- Add current segment to output string
+		-- Pad the output out to 36 characters
+		-- set start point to start point + breakpoint
+	-- return output line
+
+
+Output Example
+---------------
+P-text: the quick brown fox. 
+R-text: ESP BFTNV MCZHY QZI.
+
+Simulated output window with break at 12 characters (would break in the word 'brown', so break placed at last whitespace):
++------------+
+|the quick   |
+|ESP BFTNV   |
+|            |
+|brown fox.  |
+|MCZHY QZI.  |
++------------+
