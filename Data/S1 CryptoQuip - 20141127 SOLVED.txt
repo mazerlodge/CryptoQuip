@@ -1,0 +1,32 @@
+G AVGBJ AVGF JGRKZSFS GF XBMTDDTBKQ KGHVA GB MTKTN, FT G’D YNTZSZKQ RSAGBH YSKGFV FSXFSHR.
+
+^G=i
+
+Solution: I think this kielbasa is uncommonly light in color, so i’m probably eating palish sausage.
+
+TransTable: ^XAQBJRZKSYDTMFNVGH=utynkeblapmocsrhig
+
+Distribution:
+R=2
+G=9
+Z=2
+D=2
+.=0
+A=3
+T=5
+ =13
+Q=1
+F=6
+Y=1
+N=1
+V=3
+K=5
+S=6
+H=2
+X=1
+M=1
+=0
+B=4
+,=0
+J=1
+** end distro. **
