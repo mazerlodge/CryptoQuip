@@ -12,6 +12,7 @@ S1 ToDo - CQ
 	X- Add 'load' as input to CQ to load stored phrase
 	- Sort Distribution before outputting
 	- Add confirmation dialog before ‘Set Phrase’ when a phrase is in progress (trans table is not empty).
+	- Add show trans table command (trans?) 1230
+	- Add $ prefix to trans to do a substitution e.g. $Y=g substitutes whatever Y was before 1230 
 
-/Users/mazerlodge/Library/Application Support/iPhone Simulator/7.1-64/Applications/E42530AF-B102-4308-8B9B-7E17417D3B2D/Documents
 
