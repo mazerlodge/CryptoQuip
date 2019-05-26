@@ -419,7 +419,7 @@
     for (int x=0; x<rawPhrase.length; x++) {
         char currChar = [rawPhrase characterAtIndex:x];
         NSNumber *can = [[NSNumber alloc] initWithChar:currChar];
-        NSNumber *usageCount = [[NSNumber alloc] initWithInt:0];
+        NSNumber *usageCount = [[NSNumber alloc] initWithInt:1];
         
         if ([letterDistro objectForKey:can] == nil) {
             // Set usage count to zero.
@@ -438,9 +438,6 @@
     NSMutableString *msg = [[NSMutableString alloc] initWithString:@"Distribution:\n"];
 	NSArray *sortedKeys = [self sortTheKeys:[letterDistro allKeys]];
 	
-	for (NSNumber *aKey in sortedKeys)
-		NSLog(@"%@",aKey);
-    
     for (NSNumber *aKey in sortedKeys) {
         [msg appendFormat:@"%c=%d\n", aKey.intValue, [[letterDistro objectForKey:aKey] intValue]];
         
