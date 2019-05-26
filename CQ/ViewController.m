@@ -436,8 +436,12 @@
     } // for x...
     
     NSMutableString *msg = [[NSMutableString alloc] initWithString:@"Distribution:\n"];
+	NSArray *sortedKeys = [self sortTheKeys:[letterDistro allKeys]];
+	
+	for (NSNumber *aKey in sortedKeys)
+		NSLog(@"%@",aKey);
     
-    for (NSNumber *aKey in letterDistro.keyEnumerator) {
+    for (NSNumber *aKey in sortedKeys) {
         [msg appendFormat:@"%c=%d\n", aKey.intValue, [[letterDistro objectForKey:aKey] intValue]];
         
     }
@@ -447,6 +451,36 @@
     
     
 }
+
+- (NSArray *) sortTheKeys: (NSArray *) unsortedKeys {
+	
+	// An array of NSNumbers
+	NSMutableArray *rval = [[NSMutableArray alloc] initWithCapacity:[unsortedKeys count]];
+	
+	NSNumber *MAX_CHAR = [[NSNumber alloc] initWithChar:127];
+	NSNumber *minNum = MAX_CHAR;
+	NSNumber *maxOutVal = [[NSNumber alloc] initWithChar:0];
+	bool bDone = false;
+	
+	while (!bDone) {
+		// find minVal in input that is greater than maxVal in output
+		for (NSNumber *aNum in unsortedKeys)
+			if (([minNum compare:aNum] == NSOrderedDescending)
+				&& ([maxOutVal compare:aNum] == NSOrderedAscending))
+				minNum = aNum;
+		
+		// put the found value in the output array
+		[rval addObject:minNum];
+		maxOutVal = minNum;
+		minNum = MAX_CHAR;
+		
+		if ([rval count] == [unsortedKeys count])
+			bDone = true;
+	}
+	
+	return rval;
+}
+
 
 - (IBAction)closeKeyboard:(id)sender {
     

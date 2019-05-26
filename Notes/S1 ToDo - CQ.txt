@@ -10,9 +10,7 @@ S1 ToDo - CQ
 	X- Add 'save' as input to CQ to save phrase AND translation table
 	X- Check output plist, writing path not encoded phrase.
 	X- Add 'load' as input to CQ to load stored phrase
-	- Sort Distribution before outputting
+	X Sort Distribution before outputting (done 20190526)
 	- Add confirmation dialog before ‘Set Phrase’ when a phrase is in progress (trans table is not empty).
 	- Add show trans table command (trans?) 1230
 	- Add $ prefix to trans to do a substitution e.g. $Y=g substitutes whatever Y was before 1230 
-
-
