@@ -4,7 +4,11 @@
 
 # XCode project file
 *.xcodeproj
-.DS_Store 
+.DS_Store
+*.zip
+*.pch
+*.jpg
+*.png
 
 # Documentation artifacts
 *.pdf 
