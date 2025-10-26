@@ -1,0 +1,15 @@
+Use Case List.txt
+
+Goal - List what cryptoquip needs to do (aka Use cases) 
+
+List of Commands (from commands array in help output) 
+    ? or help - show this info.
+    set - set phrase to output contents.
+    distro - show letter distribution.
+    save - save phrase and trans table.
+    load - load phrase and trans table.
+    phrase - show the phrase.
+    A=b - add trans table entry.
+    A=_ (space) - remove entry for A.
+    ^ABC=def - create multiple entries.
+
